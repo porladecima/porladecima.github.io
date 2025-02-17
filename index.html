@@ -290,10 +290,39 @@
                 transform: rotate(0.3deg);
             }
         }
+
+        #scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+#scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+#scroll-to-top.show {
+  display: block;
+}
+
     </style>
 </head>
 
 <body>
+    <button id="scroll-to-top" title="Ir arriba">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
     <section class="portada">
         <h1>Crónicas Históricas de Porlamar<br>en Décimas</h1>
         <img src="./moncho.jpg" alt="Prof. José Ramón Marcano" class="autor-foto">
@@ -531,6 +560,26 @@
 
     <script>
         "use strict";
+
+        window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > window.innerHeight / 2 || document.documentElement.scrollTop > window.innerHeight / 2) {
+    document.getElementById("scroll-to-top").classList.add("show");
+  } else {
+    document.getElementById("scroll-to-top").classList.remove("show");
+  }
+}
+
+document.getElementById("scroll-to-top").addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
         
     </script>
 </body>

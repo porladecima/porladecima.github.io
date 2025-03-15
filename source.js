@@ -5,11 +5,14 @@ const decimas = Array.from($A(".decima"));
 let currentGroup = 0; 
 const cardsPerGroup = 3;
 const totalGroups = Math.ceil(decimas.length / cardsPerGroup);
+let cardsContainer;
 
 document.addEventListener("DOMContentLoaded",()=>{
     onscroll = function() {
         scrollFunction();
       };
+
+    cardsContainer = document.querySelector(".decimas-grid"); 
 
 
       //ejecuciones de funciones 
@@ -73,6 +76,11 @@ function showCards(groupIndex) {
     for (let i = startIndex; i < endIndex; i++) {
         decimas[i].style.display = "block"; // O el estilo de visualización que uses (e.g., "flex", "inline-block")
     }
+
+    if (cardsContainer) {
+        cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    
 }
 
 

@@ -77,9 +77,7 @@ function showCards(groupIndex) {
         decimas[i].style.display = "block"; // O el estilo de visualización que uses (e.g., "flex", "inline-block")
     }
 
-    if (cardsContainer) {
-        cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    
     
 }
 
@@ -89,7 +87,11 @@ function showPreviousGroup() {
         currentGroup--;
         showCards(currentGroup);
         updateButtonVisibility();
+        if (cardsContainer) {
+        cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    }
+    
 }
 
 function showNextGroup() {
@@ -97,6 +99,9 @@ function showNextGroup() {
         currentGroup++;
         showCards(currentGroup);
         updateButtonVisibility();
+        if (cardsContainer) {
+        cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     }
 }
 

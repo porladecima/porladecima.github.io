@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         // Mostrar el primer grupo al cargar la página
         showCards(currentGroup);
         updateButtonVisibility(); // Muy importante para ocultar botones al principio/final
+        scrollFunction();
       
 
 });

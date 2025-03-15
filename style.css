@@ -1,0 +1,347 @@
+:root {
+    --color-fondo: #f3e9d0;
+    --color-texto: #38220f;
+    --color-borde: #8b5e3c;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Old Standard TT', serif;
+    background: url('https://img.freepik.com/foto-gratis/textura-papel-viejo_1100-12.jpg') fixed;
+    color: var(--color-texto);
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a{
+    color: #222;
+    text-shadow: 1px 1px 2px;
+
+}
+
+.social-icons {
+margin-bottom: 10px;
+}
+
+.icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+margin: 0 10px;
+border-radius: 50%;
+background-color: #333;
+color: #fff;
+font-size: 20px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+background-color: #555;
+}
+
+.portada {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+    z-index: 1;
+}
+
+.portada h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.portada::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.autor-foto {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 150px;
+    height: 200px;
+    border: 3px solid var(--color-borde);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction:column;
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    width: 95%;
+    padding: 20px;
+    position: static;
+    top: auto;
+    background: rgba(243, 233, 208, 0.75);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    border-radius: 5px;
+    /*min-height: calc(100vh-200px);*/
+    
+    
+}
+
+.presentacion {
+    position: relative;
+    padding: 3rem 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+    background: rgba(255, 253, 247, 0.9);
+    border-left: 5px solid var(--color-borde);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    transform: rotate(0.5deg) translateZ(rotate(deg));
+    width:90%;
+    margin:2rem auto;
+}
+
+.presentacion::after {
+    content: '✻';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: var(--color-borde);
+    opacity: 0.5;
+}
+
+.presentacion p:first-child::first-letter {
+    float: left;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 4.5rem;
+    line-height: 0.8;
+    margin: 0.15em 0.1em 0 0;
+    color: var(--color-borde);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.presentacion blockquote {
+    font-style: italic;
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid var(--color-borde);
+    color: #5a4a3a;
+}
+
+.firma {
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: right;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.firma small {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.decimas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.decima {
+    background: var(--color-fondo);
+    padding: 2rem;
+    border: 1px solid var(--color-borde);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+    
+}
+
+
+.decima:hover {
+    transform: translateY(-5px);
+}
+
+.decima img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--color-borde);
+    filter: sepia(0.8);
+    margin-bottom: 1rem;
+}
+
+.decima h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-texto);
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.decima h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background: var(--color-borde);
+}
+
+.decima p {
+    text-align: center;
+    /*white-space: pre-line*/;
+    margin: 0;
+    padding: 0.5rem;
+    /*line-height: 1.6*/;
+    font-style: italic;
+    font-size: small;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--color-fondo);
+    border-top: 2px solid var(--color-borde);
+    margin-top: 65px;
+    position: relative;
+    z-index: 3;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .portada h1 {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+    
+    .autor-foto {
+        width: 100px;
+        height: 150px;
+        right: 1rem;
+        bottom: 1rem;
+    }
+    
+    .container {
+        margin-top: 1rem;
+        width: 98%;
+        padding: 10px;
+    }
+    
+    .decima {
+        padding: 1rem;
+    }
+    .presentacion{
+        width: 95%;
+        transform: rotate(0.3deg);
+    }
+}
+
+#scroll-to-top {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #fffdf7e6;
+color: #8b5e3c;
+border: none;
+border-radius: 50%;
+padding: 15px;
+font-size: 20px;
+cursor: pointer;
+transition: opacity 0.3s ease;
+z-index: 999;
+}
+
+#scroll-to-top:hover {
+background-color: #fffdf7e8;
+}
+
+#scroll-to-top.show {
+display: block;
+}
+
+.control-navegacion{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+.control-navegacion button{
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    color: var(--color-borde);
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+/* Estilos generales para la sección del reproductor */
+#audio-section {
+    background-color: #f8f8f8;
+    border: 1px solid var(--color-borde);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /* Ancho máximo para que no se extienda demasiado */
+    margin: 20px auto; /* Centrar horizontalmente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#audio-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: var(--color-borde);
+    text-align: center;
+}
+

@@ -323,6 +323,7 @@ display: block;
     color: var(--color-borde);
     font-weight: bold;
     cursor: pointer;
+    font-size: 2rem;
     
 }
 

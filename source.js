@@ -87,9 +87,10 @@ function showPreviousGroup() {
         currentGroup--;
         showCards(currentGroup);
         updateButtonVisibility();
-        if (cardsContainer) {
-        cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+        
     }
+    if (cardsContainer) {
+        cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     
 }
@@ -99,10 +100,11 @@ function showNextGroup() {
         currentGroup++;
         showCards(currentGroup);
         updateButtonVisibility();
-        if (cardsContainer) {
+        }
+    if (cardsContainer) {
         cardsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    }
+
 }
 
 function updateButtonVisibility() {

@@ -304,7 +304,7 @@ background-color: #fffdf7e8;
 }
 
 #scroll-to-top.show {
-display: block;
+display: none;
 }
 
 .control-navegacion{
@@ -313,7 +313,7 @@ display: block;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
 }
 .control-navegacion button{
@@ -323,7 +323,7 @@ display: block;
     color: var(--color-borde);
     font-weight: bold;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     
 }
 

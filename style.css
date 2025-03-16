@@ -319,7 +319,7 @@ display: none;
 .control-navegacion button{
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    border: 2px solid var(--color-borde);
+    border: 2px solid var(--color-borde) !important;
     color: var(--color-borde);
     font-weight: bold;
     cursor: pointer;

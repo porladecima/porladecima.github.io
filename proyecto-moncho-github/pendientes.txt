@@ -1,0 +1,12 @@
+pendientes:
+
+
+-crear la pagina de relatos
+
+-agregar animaciones -
+-agregar lo de los ebooks
+-gif animados
+-intersection observer
+
+
+
